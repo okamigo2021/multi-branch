@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('BUILD') {
             steps {
-                sh 'echo Hello > hello.txt'
+                echo 'building the application...'
             }
         }
-        stage('Publish') {
+        stage('DEPLOY') {
             steps {
-                archiveArtifacts artifacts: 'hello.txt'
+                echo 'deploying the application...'
             } 
         }    
     }
