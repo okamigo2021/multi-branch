@@ -8,12 +8,12 @@ pipeline {
             }
         }
         stage('DEPLOY') {
-            steps {
-                echo 'deploying the application...'
             when {
                 branch 'main'
             } 
+            steps {
+                echo 'deploying the application...'
+            }
         }    
-    }
     }
 }
